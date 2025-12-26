@@ -69,7 +69,7 @@
          breaks = 30, 
          col = "lightgray", 
          border = "white",
-         main = "4a: Histograma das Temperaturas Simuladas", 
+         main = "Histograma das Temperaturas Simuladas", 
          xlab = "Temperatura (°C)", 
          ylab = "Frequência")
     
@@ -84,7 +84,7 @@
          breaks = 30, 
          probability = TRUE, 
          col = "lightblue", 
-         main = "4b: Sobreposição (Simulado vs Teórico)", 
+         main = "Sobreposição", 
          xlab = "Temperatura (°C)", ylab = "Densidade")
     
     lines(x_curva, y_curva, col = "red", lwd = 3) # Linhas da Normal
