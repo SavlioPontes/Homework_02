@@ -27,7 +27,7 @@ CDF = c(0,cumsum(PMF))
 CDF.plot = stepfun(x,CDF,f=0)
 par(mar=c(6,5,4,2))
 plot.stepfun(CDF.plot,col='blue',
-             xlab=TeX('x'),ylab=TeX('F_X(x)'),
+             xlab=TeX('x (valores que X pode assumir)'),ylab=TeX('F_X(x)'),
              verticals=FALSE,
              do.points=TRUE,
              pch=19, lwd=2,
