@@ -19,13 +19,20 @@ aproximacao <- function(n,p,k){
 
 #--------------- QUESTÃO 2.2 ---------------#
 
-# Como as probabilidades são independentes,a distribuição exata é a Binomial
+#Distribuição Binomial (exata)
 exp_bin <- n * p
 var_bin <- n * p * (1-p)
 
-# Como foi apresentado anteriormente, a distribuição aproximada é a Poisson
+#Distribuição de Poisson (aproximada)
 exp_pois <- taxa
 var_pois <- taxa
+
+data.frame(
+  Distribuição = c("Binomial (exata)", "Poisson (aproximada)"),
+  Valor_Esperado = c(exp_bin, exp_pois),
+  Variância = c(var_bin, var_pois)
+)
+
 
 #--------------- QUESTÃO 2.3 ---------------#
 
@@ -58,7 +65,7 @@ print(round(freq_teorica,4))
 # Gráfico de comparação: PMF teórica vs empírica
 plot(k_teorico, freq_teorica, type = "h",
      lwd = 3,
-     main = "Simulação vs Teoria (PMF)",
+     main = "",
      xlab = "Número de Vencedores (k)",
      ylab = "Probabilidade",
      ylim = c(0, max(freq_teorica, freq_empirica) * 1.1))
