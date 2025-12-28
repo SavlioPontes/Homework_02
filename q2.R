@@ -55,10 +55,19 @@ print(round(freq_empirica,4))
 print("--TEÓRICO--")
 print(round(freq_teorica,4))
 
-# Gráfico sobre a PMF de cada valor gerado na simulação e a comparação com a teoria.
-plot(k_teorico, prob_teorica, type = "h", lwd = 8, col = "lightgray",
+# Gráfico de comparação: PMF teórica vs empírica
+plot(k_teorico, freq_teorica, type = "h",
+     lwd = 3,
      main = "Simulação vs Teoria (PMF)",
-     xlab = "Número de Vencedores (k)", ylab = "Probabilidade")
-points(k_sim, freq_empirica, pch = 16, col = "blue")
-legend("topright", legend = c("Teoria", "Simulação"), 
-       col = c("lightgray", "blue"), lwd = c(5, NA), pch = c(NA, 16))
+     xlab = "Número de Vencedores (k)",
+     ylab = "Probabilidade",
+     ylim = c(0, max(freq_teorica, freq_empirica) * 1.1))
+
+points(k_teorico, freq_empirica,
+       pch = 16, col = "blue")
+
+legend("topright",
+       legend = c("Teoria (Poisson)", "Simulação"),
+       lwd = c(3, NA),
+       pch = c(NA, 16),
+       col = c("black", "blue"))

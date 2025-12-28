@@ -8,8 +8,8 @@ n <- 50
 p <- 0.7
 x <- 0:n
 
-# 2. Gráficos da  PMF e da CDF
-
+# 2. Gráficos
+#PMF
 PMF <- dbinom(x, size = n, prob = p)
 plot(x, PMF,
      type = "h",
@@ -17,21 +17,23 @@ plot(x, PMF,
      xlab = "Número de clientes que pedem sobremesa",
      ylab = "P(X = x)",
      main = "")
-
 # Curva Normal de aproximação
 curve(dnorm(x, mean = valor_esperado, sd = desvio), add = TRUE, col = "red", lwd = 2)
 legend("topleft", legend = c("Binomial", "Normal"), col = c("black", "red"), lwd = 2)
 
-cdf = c(0,cumsum(PMF))
-cdf.plot = stepfun(x,cdf,f=0)
+
+#CDF
+CDF = c(0,cumsum(PMF))
+CDF.plot = stepfun(x,CDF,f=0)
 par(mar=c(6,5,4,2))
-plot.stepfun(cdf.plot,col='blue',
+plot.stepfun(CDF.plot,col='blue',
              xlab=TeX('x'),ylab=TeX('F_X(x)'),
              verticals=FALSE,
              do.points=TRUE,
              pch=19, lwd=2,
              cex.lab=1.3, 
-             cex.axis=1.2)
+             cex.axis=1.2,
+             main="")
 abline(h=0)
 
 #3. Valor esperado, variância e desvio padrão de X.

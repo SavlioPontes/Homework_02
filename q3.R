@@ -2,16 +2,16 @@
     #Questão 3
     #--------------- QUESTÃO 3.1 ---------------#
     
-    gerar_temp <- function(n){
+    gerar_temp <- function(n){ # Função que vai gerar os valores empíricos
       n_pares <- n/2
       
       u1 = runif(n_pares)
       u2 = runif(n_pares)
     
-      z1 = sqrt(-2 * log(u1)) * cos(2 * pi * u2)
+      z1 = sqrt(-2 * log(u1)) * cos(2 * pi * u2) 
       z2 = sqrt(-2 * log(u1)) * sin(2 * pi * u2)
       
-      z <- c(z1,z2)
+      z <- c(z1,z2) # Concatenação dos vetores
       temp <- 62 + 3.5*z
       return(temp)
     }
@@ -69,7 +69,7 @@
          breaks = 30, 
          col = "lightgray", 
          border = "white",
-         main = "4a: Histograma das Temperaturas Simuladas", 
+         main = "Histograma das Temperaturas Simuladas", 
          xlab = "Temperatura (°C)", 
          ylab = "Frequência")
     
@@ -84,7 +84,7 @@
          breaks = 30, 
          probability = TRUE, 
          col = "lightblue", 
-         main = "4b: Sobreposição (Simulado vs Teórico)", 
+         main = "Sobreposição", 
          xlab = "Temperatura (°C)", ylab = "Densidade")
     
     lines(x_curva, y_curva, col = "red", lwd = 3) # Linhas da Normal
