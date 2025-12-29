@@ -28,8 +28,8 @@ Para esse trabalho, a inteligência artifical foi utilizada para otimizar proces
 ## INSTRUÇÕES PARA EXECUÇÃO
 Para rodar o código, basta:
 1. Clone o repositório:
-- git clone https://github.com/SavlioPontes/Homework_01.git
-cd Homework_01
+- git clone https://github.com/SavlioPontes/Homework_02.git
+cd Homework_02
 
 2. Instale as Dependências #Execute no R/RStudio:
 - dependencies <- c(
