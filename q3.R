@@ -4,14 +4,18 @@
 gerar_temp <- function(n){ # Função que vai gerar os valores empíricos
   n_pares <- n/2
   
-  u1 = runif(n_pares)
-  u2 = runif(n_pares)
+  # a) variáveis aleatórias uniformes independentes
+  u1 <- runif(n_pares)
+  u2 <- runif(n_pares)
   
-  z1 = sqrt(-2 * log(u1)) * cos(2 * pi * u2) 
-  z2 = sqrt(-2 * log(u1)) * sin(2 * pi * u2)
+  # b) Box-Muller
+  z1 <- sqrt(-2 * log(u1)) * cos(2 * pi * u2) 
+  z2 <- sqrt(-2 * log(u1)) * sin(2 * pi * u2)
   
-  z <- c(z1,z2) # Concatenação dos vetores
-  temp <- 62 + 3.5*z
+  z <- c(z1, z2)
+  
+  # c) conversão para temperatura
+  temp <- 62 + 3.5 * z
   return(temp)
 }
 
