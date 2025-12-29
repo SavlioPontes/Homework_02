@@ -18,5 +18,9 @@ Homework_01/
 ### PROCESSO
 Nesse projeto, foram trabalhadas as competências em R relacionadas à estatística probabilística por meio de questões contextualizadas, nas quais foram calculados e analisados dados como o valor esperado, a variância, o desvio padrão e as diferentes distribuições possíveis para as variáveis aleatórias em cada contexto. A partir desses valores e das visualizações gráficas, foi possível fazer interpretações acerca do comportamento dos dados e como ele se traduziu nos contextos apresentados. Além disso, também foram realizados os cálculos teóricos das questões de modo a possibilitar uma comparação com os resultados obtidos pelos métodos utilizados pelo R.
 
-Para isso, o projeto foi separado em três arquivos de código em R (q1.R, q2.R e q3.R), um para cada questão, os quais foram criados e programados pela plataforma RStudio conectada ao Git. Desse modo, os integrantes faziam suas partes simultaneamente, enviando as alterações feitas para o repositório remoto do gitHub, no qual conseguiam visualizar todo o trabalho.  Ademais, o relatório do projeto foi feito na linguagem LATEX na plataforma Overleaf, que também permite uma edição simultânea dos textos. 
+Para isso, o projeto foi separado em três arquivos de código em R (q1.R, q2.R e q3.R), um para cada questão, os quais foram criados e programados pela plataforma RStudio conectada ao Git. Desse modo, os integrantes faziam suas partes simultaneamente, enviando as alterações feitas para o repositório remoto do gitHub, no qual conseguiam visualizar todo o trabalho.  
+Ademais, o relatório do projeto foi feito na linguagem LATEX na plataforma Overleaf, que também permite uma edição simultânea dos textos. 
 
+## USO DA IA
+Para esse trabalho, a inteligência artifical foi utilizada para otimizar processos, como gerar modelos de código para o LATEX, gerar as tabelas simples de exposição dos dados, encontrar erros nos programas deesenvolvidos e tirar dúvidas sobre a linguagem. A plataforma mais utilizada foi o ChatGPT. A seguir, o link para a conversa referente ao projeto:
+- https://chatgpt.com/g/g-p-6928cb70feb081918dfadeeb2be7d45d-homework-2/project
