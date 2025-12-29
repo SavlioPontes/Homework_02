@@ -24,3 +24,20 @@ Ademais, o relatório do projeto foi feito na linguagem LATEX na plataforma Over
 ## USO DA IA
 Para esse trabalho, a inteligência artifical foi utilizada para otimizar processos, como gerar modelos de código para o LATEX, gerar as tabelas simples de exposição dos dados, encontrar erros nos programas deesenvolvidos e tirar dúvidas sobre a linguagem. A plataforma mais utilizada foi o ChatGPT. A seguir, o link para a conversa referente ao projeto:
 - https://chatgpt.com/g/g-p-6928cb70feb081918dfadeeb2be7d45d-homework-2/project
+
+## INSTRUÇÕES PARA EXECUÇÃO
+Para rodar o código, basta:
+1. Clone o repositório:
+- git clone https://github.com/SavlioPontes/Homework_01.git
+cd Homework_01
+
+2. Instale as Dependências #Execute no R/RStudio:
+- dependencies <- c(
+  "latex2exp"  # Utilizado para renderização de expressões LaTeX nos gráficos
+)
+
+install.packages(dependencies, dependencies = TRUE)
+
+
+3. Para rodar o código execute no console do R:
+- source("questions.R") 
