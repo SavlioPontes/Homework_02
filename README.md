@@ -12,7 +12,7 @@ Homework_01/
 - q2.R                        # Seleção aleatória de um usuário
 - q3.R                        # Monitoramento da CPU
 - questions.R                 # Arquivo com todas as questões
-- RelatórioHW1.pdf            # Relatório do trabalho (PDF)
+- Homework_02.pdf            # Relatório do trabalho (PDF)
 - README.md                   # Este arquivo
 
 ### PROCESSO
