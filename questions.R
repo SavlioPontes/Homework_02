@@ -2,13 +2,15 @@ rm(list=ls())
 options(digits=7)
 library(latex2exp)
 #QUESTÃO 1
-# 1. Função de distribuição de X - Binomial(x,n,p)
+
+#--------------- QUESTÃO 1.1 ---------------#
+#Função de distribuição de X - Binomial(x,n,p)
 n <- 50
 p <- 0.7
 x <- 0:n
 
-# 2. Gráficos
-#PMF
+#--------------- QUESTÃO 1.2 ---------------#
+#Gráfico da PMF
 PMF <- dbinom(x, size = n, prob = p)
 plot(x, PMF,
      type = "h",
@@ -21,7 +23,7 @@ curve(dnorm(x, mean = valor_esperado, sd = desvio), add = TRUE, col = "red", lwd
 legend("topleft", legend = c("Binomial", "Normal"), col = c("black", "red"), lwd = 2)
 
 
-#CDF
+#Gráfico da CDF
 CDF = c(0,cumsum(PMF))
 CDF.plot = stepfun(x,CDF,f=0)
 par(mar=c(6,5,4,2))
@@ -35,7 +37,7 @@ plot.stepfun(CDF.plot,col='blue',
              main="")
 abline(h=0)
 
-#3. Valor esperado, variância e desvio padrão de X.
+#--------------- QUESTÃO 1.3 ---------------#
 
 valor_esperado <- n*p
 variância <-n * p * (1 - p)
@@ -44,7 +46,8 @@ desvio <- sqrt(variância)
 #display dos dados
 data.frame(valor_esperado, variância, desvio)
 
-#4. a) P(X ≥ 20)
+#--------------- QUESTÃO 1.4 ---------------# 
+#a) P(X ≥ 20)
 respostaA <- 1-pbinom(q = 19, size = 50, prob = 0.7)
 # b) P(30 < X < 43)
 respostaB <- sum(dbinom(31:42, size = 50, prob = 0.7))
@@ -55,7 +58,8 @@ cat("a) P(X ≥ 20) =", respostaA, "\n")
 cat("b) P(30 < X < 43) =", respostaB, "\n")
 cat("c) P(X = 31) =", respostaC, "\n")
 
-#6 p = 0.8
+#--------------- QUESTÃO 1.6 ---------------#
+#p = 0.8
 PMF2 <- dbinom(x, size = n, prob = 0.8)
 plot(x, PMF2,
      type = "h",
